@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="View your tarot cards with Arcanalyzer.">
+    <meta name="author" content="Emma Lytle">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="img/pentacle.png">
+	<link rel="icon" type="image/png" href="img/pentacle.png">
+	  <title>Arcanalyzer - Options</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap_5.0.2/bootstrap.min.css" rel="stylesheet">
+	<!-- Lightbox -->
+	<link href="css/lightbox.css" rel="stylesheet">
+	<!-- Main CSS -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<!--Bootstrap Nav - https://getbootstrap.com/docs/5.0/components/navbar/#nav-->
+<nav class="navbar fixed-top navCon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <!--<img class="img-fluid navbar-icon" style="width: 50px;" alt="Pentacle" src="img/pentacle.png">-->
+    </a>
+   <div class="nav-images">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+      </button>
+    </div>   
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+        <img class="img-fluid navbar-icon" style="width: 70px;" alt="Rider-Waite Wheel of Fortune Icon" src="img/wheel.png">
+          <h3 class="offcanvas-title" id="offcanvasNavbarLabel">ARCANALYZER</h3>
+            <div class="nav-images">  
+              <button type="button" class="off-swords" data-bs-dismiss="offcanvas" aria-label="Close">  
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+              </button>
+            </div>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link" href="welcome.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="options.html">Options</a></li>
+          <li class="nav-item"><a class="nav-link" href="new.html">New Spread</a></li>
+          <li class="nav-item"><a class="nav-link" href="view.html">View Cards</a></li>
+          <li class="nav-item"><a class="nav-link" href="stats.html">Spread Stats</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Section Two -->
+<div id="stwo">
+  <div class="opt-header">
+    <img class="img-fluid header-img" src="img/magician.png" alt="Magician">
+  <h1>OPTIONS</h1>
+    <h2>Make a selection:</h2>
+  </div>
+  <div class="container">
+    <div class="optionBox">
+          <div class="col-sm-12">
+            <p class="opt-p opt-top">Add a new spread. This can be as many or as few cards as you need.</p>
+                <button class="homeButton btnTop" onclick="window.location.href='new.html'">
+                  <img class="btnIcon" src="img/pentacle.png" alt="Pentacle">
+                    <span class="btnLabel opt-new">NEW SPREAD</span>
+                </button>  
+          </div>  
+          <div class="col-sm-12">
+            <p class="opt-p">View your spreads. This lists your spreads and cards chronologically.</p>
+                <button class="homeButton btnMid" onclick="window.location.href='view.html'">
+                  <img class="btnIcon" src="img/moon2.png" alt="The Moon">
+                    <span class="btnLabel opt-new">VIEW SHEET</span>
+                </button>
+            </div>
+          <div class="col-sm-12">
+            <p class="opt-p">Analyze your spread statistics. See how often you pull certain cards, the frequency of numbers, and more.</p>
+                <button class="homeButton btnBot" onclick="window.location.href='stats.html'">
+                  <img class="btnIcon" src="img/sun3.png" alt="The Sun" >
+                    <span class="btnLabel opt-new">ANALYZE STATS</span>
+                </button> 
+          </div>
+                </div>
+          <div class="col-sm-4">
+        <img src="img/hermit.png" alt="The Hermit" class="opt-img">
+        </div>
+
+  </div>
+</div>
+<footer class="foot">
+    <p>ARCANALYZER &copy;2026. DECODE YOUR PATTERNS. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<!-- jQuery --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Lightbox JS -->
+<script src="js/lightbox.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="js/bootstrap_5.0.2/bootstrap.min.js"></script>
+<script src="js/p1scripts.js"></script>
+</body>
+</html>

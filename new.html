@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="View your tarot cards with Arcanalyzer.">
+    <meta name="author" content="Emma Lytle">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="img/pentacle.png">
+	<link rel="icon" type="image/png" href="img/pentacle.png">
+
+	<title>Arcanalyzer - New Spread</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap_5.0.2/bootstrap.min.css" rel="stylesheet">
+	<!-- Lightbox -->
+	<link href="css/lightbox.css" rel="stylesheet">
+
+	<!-- Main CSS -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+	
+<!--Bootstrap Nav - https://getbootstrap.com/docs/5.0/components/navbar/#nav-->
+<nav class="navbar fixed-top navCon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+    </a>
+    <div class="nav-images">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+        <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+      </button>
+    </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+           <img class="img-fluid navbar-icon" style="width: 70px;" alt="3 of Hearts" src="img/hearts.png">
+           <h3 class="offcanvas-title" id="offcanvasNavbarLabel">ARCANALYZER</h3>
+        <div class="nav-images">  
+          <button type="button" class="off-swords" data-bs-dismiss="offcanvas" aria-label="Close">  
+            <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+            <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+            <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+          </button>
+        </div>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link active" href="welcome.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="options.html">Options</a></li>
+          <li class="nav-item"><a class="nav-link" href="new.html">New Spread</a></li>
+          <li class="nav-item"><a class="nav-link" href="view.html">View Cards</a></li>
+          <li class="nav-item"><a class="nav-link" href="stats.html">Spread Stats</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Section Three -->
+<div id="sthree">
+  <div class="opt-header">
+    <img class="img-fluid header-img" src="img/magician-lg.png" alt="Magician">
+  <h1>NEW SPREAD</h1>
+    <h2>Select your card from the dropdown.</h2>
+    </div>
+    <div class="container">
+      <div class="wizard-container" id="wizard-box">
+        <div id="step-1" class="step-section">
+          <label class="form-label" for="arcana-select">Card Type</label>
+            <select id="arcana-select" class="form-select mb-3">
+              <option value="major">Major Arcana</option>
+              <option value="minor">Minor Arcana</option>
+            </select>
+            <button class="homeButton" id="nextButton" onclick="goToStep2()">
+              <img class="btnIcon" src="img/pentacle.png" alt="The Moon">
+                <span class="btnLabel">NEXT</span>
+            </button>
+        </div>
+        <div id="step-2-major" class="step-2-major">
+          <label class="form-label" for="major-card-select">Select Major Card</label>
+            <select id="major-card-select" class="form-select mb-3">
+              <option value="0">0 - The Fool</option>
+              <option value="1">1 - The Magician</option>
+              <option value="2">2 - The High Priestess</option>
+              <option value="3">3 - The Empress</option>
+              <option value="4">4 - The Emperor</option>
+              <option value="5">5 - The Hierophant</option>
+              <option value="6">6 - The Lovers</option>
+              <option value="7">7 - The Chariot</option>
+              <option value="8">8 - Strength</option>
+              <option value="9">9 - The Hermit</option>
+              <option value="10">10 - Wheel of Fortune</option>
+              <option value="11">11 - Justice</option>
+              <option value="12">12 - The Hanged Man</option>
+              <option value="13">13 - Death</option>
+              <option value="14">14 - Temperance</option>
+              <option value="15">15 - The Devil</option>
+              <option value="16">16 - The Tower</option>
+              <option value="17">17 - The Star</option>
+              <option value="18">18 - The Moon</option>
+              <option value="19">19 - The Sun</option>
+              <option value="20">20 - Judgement</option>
+              <option value="21">21 - The World</option>
+            </select>
+            <div class="col-sm-12 arcanaBtns">
+              <button class="homeButton" onclick="goBackToStep1()">
+                <img class="btnIcon" src="img/pentacle.png" alt="The Moon">
+                  <span class="btnLabel">BACK</span>
+              </button>
+              <button class="homeButton" onclick="submitCard('Major')">
+                <img class="btnIcon" src="img/pentacle.png" alt="The Moon">
+                  <span class="btnLabel">SUBMIT CARD</span>
+              </button>
+            </div>
+        </div>
+          <div id="step-2-minor" class="step-2-minor">
+            <label class="form-label" for="minor-rank">Rank</label>
+              <select id="minor-rank" class="form-select mb-2">
+                <option value="1">Ace</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">Page</option>
+                <option value="12">Knight</option>
+                <option value="13">Queen</option>
+                <option value="14">King</option>
+              </select>
+              <label class="form-label" for="minor-suit">Suit</label>
+                <select id="minor-suit" class="form-select mb-3">
+                  <option value="Wands">Wands</option>
+                  <option value="Cups">Cups</option>
+                  <option value="Swords">Swords</option>
+                  <option value="Pentacles">Pentacles</option>
+                </select>
+                <div class="col-sm-12 arcanaBtns">
+                  <!--When I validate this, it say-->
+                    <button class="homeButton" onclick="goBackToStep1()">
+                      <img class="btnIcon" src="img/pentacle.png" alt="The Moon">
+                        <span class="btnLabel">BACK</span>
+                    </button>
+                    <button class="homeButton" onclick="submitCard('Minor')">
+                      <img class="btnIcon" src="img/pentacle.png" alt="The Moon">
+                        <span class="btnLabel">SUBMIT CARD</span>
+                    </button>
+                </div>
+          </div>
+        </div>
+        <div id="current-cards" class="current-cards">
+          <h3 class="form-label">CURRENT SPREAD</h3>
+            <ul id="visual-card-list" class="list-group mb-3"></ul> 
+              <button id="open-modal" class="homeButton" onclick="completeSpread()">              
+                <img class="btnIcon" src="img/pentacle.png" alt="Pentacle">
+                  <span class="btnLabel">COMPLETE SPREAD</span>
+              </button>
+            <dialog id="my-modal" class="completeView">
+              <h2>Download your updated SpreadSheet</h2>
+              <button id="close-modal" class="homeButton" onclick="closeButton()">
+                <img class="btnIcon" src="img/pentacle.png" alt="Pentacle">
+                <span class="btnLabel">RETURN</span>
+              </button>
+              <button class="homeButton" onclick="downloadUpdatedCsv(localStorage.getItem('arcanalyzer_spread'))">
+                <img class="btnIcon" src="img/pentacle.png" alt="Pentacle">
+                  <span class="btnLabel">DOWNLOAD UPDATES</span>
+            </button>
+            </dialog>
+        </div>
+      </div>
+    </div>
+
+<footer class="fixed-bottom">
+    <p>ARCANALYZER &copy;2026. DECODE YOUR PATTERNS. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<!-- jQuery --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Lightbox JS -->
+<script src="js/lightbox.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="js/bootstrap_5.0.2/bootstrap.min.js"></script>
+<script src="js/p1scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,1180 @@
+/**********************RIPPLE ANIMATION*********************/
+.ripple-cont {
+	display: flex;
+   	height: 100vh;
+  	width: 100%;
+ 	align-items: center;
+  	justify-content: center;
+ 	background-color: #eff2f500;
+}
+.ripple-cont button {
+	position: absolute;
+	animation: ripple 8s infinite;
+	border-radius: 100%;
+	border: none;
+	background-color: #0084d1;
+	box-shadow: inset 10px 10px 20px #003741, inset -10px -10px 20px #93e9ff;
+	transition: 1s ease-in all;
+	opacity: 0;
+}
+@keyframes ripple {
+   0% {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+   }
+   100% {
+      width: 100%;
+	  height: 100%;
+      opacity: 0;
+   }
+}
+.ripple-cont button:nth-child(1) {
+   animation-delay: 2s;
+}
+.ripple-cont button:nth-child(2) {
+   animation-delay: 2.5s;
+}
+.ripple-cont button:nth-child(3) {
+   animation-delay: 3s;
+}
+.ripple-cont button:nth-child(4) {
+   animation-delay: 3.5s;
+}
+.ripple-cont button:nth-child(5) {
+   animation-delay: 4s;
+}
+/***********************************************************/
+/*******************NAVBAR - HAMBURGER MENU******************/
+    /* 2. Custom Sword Toggler Button */
+    .navbar-toggler {
+      border: none;
+      padding: 0;
+    }
+    .navbar-toggler:focus {
+      box-shadow: none; /* Removes default blue glow */
+    }
+    
+    /* Stack the swords vertically */
+    .nav-images {
+      display: flex;
+      flex-direction: column;
+      gap: 4px; /* Space between swords */
+      width: 5em; 
+	  background-color: #ffffff00;
+    }
+    .nav-sword {
+      width: 100%;
+      display: block;
+    }
+
+    /* 3. The Pop-Out Panel (Offcanvas) */
+    .offcanvas {
+		background-image: url('../img/even_halftone.png');
+      	background-color: rgb(173 171 162); /* Semi-transparent panel */
+      	border-left: 3px solid #000 !important; /* Matches your border style */
+      	max-width: 75%; /* Doesn't take full width on mobile */
+		z-index: 1050; /* Higher than the navbar (usually 1030) */
+        box-shadow: -6px 0px 30px #000000ab;
+    }
+
+	.offcanvas-title {
+        text-shadow: 2px 2px 8px #00000bb3;
+    }
+
+img.navbar-icon:hover {
+	transition: transform 0.5s ease-in-out; 
+    transform: rotate(360deg);
+}
+
+    .offcanvas-header {
+      border-bottom: 3px solid #000;
+    background-color: rgb(200, 149, 19);
+    }
+
+    /* Link Styling */
+    .nav-link {
+    	font-size: 2.5em;
+    	font-family: 'Tarot'; /* Tech/Arcane vibe */
+    	font-weight: bold;
+      	color: #000;
+    }
+
+    .nav-link:hover {
+	  color: #005f96;
+	  font-weight: bold;
+    }
+
+	button.off-swords {
+		background-color: #0080ff00;
+    	border-color: #0080ff00;
+	}
+.navbar:has(.offcanvas.show) .navbar-toggler {
+    opacity: 0;
+    pointer-events: none; /* Prevents clicking the invisible button */
+
+}
+.navCon {
+    z-index: 1030;
+}
+/***********************************************************/
+/*******************STAR ANIMATION******************/
+/* Define the animation */
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px); 
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Apply the animation to the element */
+.star1 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0; 
+}
+.star2 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 0.25s; 
+}
+.star3 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 0.5s;  
+}
+.star4 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0; 
+	animation-delay: 1.5s;  
+}
+.star5 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: .75s;   
+}
+.star6 {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 1s;   
+}
+.star7 {
+ 	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 1.25s;   
+}
+.single-star {
+  	animation-name: dropIn;
+ 	animation-duration: 0.5s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0; 
+	animation-delay: 1s;
+}
+.start-star {
+ 	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: .25s;
+}
+.mid-star {
+  	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0; 
+	animation-delay: .5s;
+}
+.end-star {
+ 	animation-name: dropIn;
+ 	animation-duration: 1s; 
+ 	animation-timing-function: ease-out; 
+ 	animation-fill-mode: forwards;
+	opacity: 0;
+	animation-delay: 0.75s; 
+}
+.row.star-cont {
+	position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+.sm-star-col {
+    display: none;
+}
+.md-star-cols {
+    display: none;
+}
+/***********************************************************/
+/**************************ALL PAGES*************************/
+@font-face {
+	font-family: 'Bodoni';
+	src: url('../fonts/Bodoni Poster Compressed.otf');
+	font-weight: normal;
+  	font-style: normal;
+  	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Roman';
+	src: url('../fonts/Roman Holiday Sketch.ttf');
+	font-weight: normal;
+  	font-style: normal;
+  	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Pamela';
+	src: url('../fonts/Tarot Pamela Colman Smith.ttf');
+	font-weight: normal;
+  	font-style: normal;
+  	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Tarot';
+	src: url('../fonts/Tarotheque.ttf');
+	font-weight: normal;
+  	font-style: normal;
+  	font-display: swap;
+}
+body {
+	background: linear-gradient(90deg, #74d3ff 20%, #003c5e 100%);
+    overflow-x: hidden;
+}
+
+ h1 {
+    font-family: 'Pamela';
+    color: white;
+    display: flex;
+    text-shadow: 5px 5px 15px #000;
+    -webkit-text-stroke: 1px black;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto; 
+    animation: glow 2.5s ease-in-out infinite alternate; /* Apply animation */
+    }
+h2 {
+    font-family: 'Tarot';
+    text-align: center;
+    margin: 0 auto;
+}
+h3 {
+    font-family: 'Pamela';
+    padding: 0.5em; 
+}
+p {
+    font-family: 'Tarot';
+    margin: 0;
+}
+#sone, #stwo, #sthree, #sfour, #sfive {
+	padding-top: 1rem;
+    background-image: url("../img/cardstock.png"), url("../img/paper.png"), url("../img/cardstock2.png"), url("../img/faded_halftone.png");
+	z-index: -10000;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#stwo, #sthree, #sfour, #sfive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    background-color: #cacacacf;
+	padding-top: 1%;
+	border-top: 5px solid;
+    display: flex;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    background-color: #37576a;
+    border-radius: 15% 15% 0 0;
+    box-shadow: 0px 5px 20px 10px #0000009c;
+    justify-content: center;
+}
+.foot {
+    position: relative;
+}
+
+.homeButton {
+    display: flex;
+    border: none;
+    background: #005F70;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 6px;
+    align-content: center;
+    justify-content: center;
+    text-align: left;
+    margin-bottom: 10px;
+    gap: 5%;
+    box-shadow: -5px 5px 5px #000000bb;
+}
+.homeButton:hover {
+background-color: #003d8c;
+}
+
+.homeButton:hover .btnLabel {
+    color: #ffd500;
+}
+
+.homeButton:hover img.btnIcon {
+animation: spin 2s linear infinite;
+}
+img.btnIcon {
+    width: 30%;
+}
+.intro-p {
+    font-family: 'Tarot';
+    background-color: #a9ecff42;
+    padding: 2%;
+    border-radius: 10%;
+    text-shadow: 5px 5px 5px #555555ab;
+}
+.btnLabel {
+    font-family: Roman;
+    line-height: 20px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    line-height: 1em;
+    margin-top: 7px;
+    font-size: 1.75em;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/***********************************************************/
+/**************************PAGE ONE - HOME*************************/
+#sone h2 p {
+    color: white;
+}
+
+.foot-p{
+    color: black;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+.intro {
+	animation-name: dropIn;
+ 	animation-duration: 1.5s; 
+ 	animation-timing-function: ease-in; 
+ 	animation-fill-mode: both;
+	animation-delay: 2.75s;  
+    display: flex;
+    flex-direction: column;
+    background-color: #37576ae3;
+    border-radius: 25% 25% 0 0;
+    box-shadow: 0px 5px 20px 10px #0000009c;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: -4%;
+}
+
+.col-sm-12 .intro-p {
+--mask:
+    radial-gradient(31.71px at 50% 44.1px,#000 99%,#0000 101%) calc(50% - 36px) 0/72px 51% repeat-x,
+    radial-gradient(31.71px at 50% -26.1px,#0000 99%,#000 101%) 50% 18px/72px calc(51% - 18px) repeat-x,
+    radial-gradient(31.71px at 50% calc(100% - 44.1px),#000 99%,#0000 101%) 50% 100%/72px 51% repeat-x,
+    radial-gradient(31.71px at 50% calc(100% + 26.1px),#0000 99%,#000 101%) calc(50% - 36px) calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+}
+.background-div {
+    position: absolute; /* Positioned relative to the container */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Places this div behind other content in the container */
+}
+.foreground-content {
+    position: relative; /* Needed for z-index to work, even if it's default 0 or auto */
+    z-index: 1; /* Ensures this content is above the background-div */
+    padding: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.option-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding: 3% 0;
+}
+
+.option-row p {
+    padding-bottom: 1%;
+}
+.option-row .col-sm-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button.menuButton {
+    border-radius: 20px;
+	border-style: ridge;
+	background-color: #d4b100d3;
+	box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.5);
+	font-family: 'Pamela';
+    width: 45%;
+    margin: 3%;
+    padding: 1%;
+}
+
+.menuButton p {
+	font-size: 3em;
+    color: white;
+    margin-bottom: -10px;
+    text-shadow: 5px 5px 9px #000000;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.title-flair {
+    background: linear-gradient(90deg, rgba(255, 242, 65, 0.404), rgba(255, 191, 72, 0.555)) no-repeat right bottom / 0 var(--bg-h);
+    transition: background-size 0.5s;
+    --bg-h: 100%;
+    border-radius: 50%;
+}
+.title-flair:where(:hover, :focus-visible) {
+    background-size: 100% var(--bg-h);
+    background-position-x: left;
+    border-style: groove;
+    border-color: rgba(190, 144, 25, 0.678);
+}
+.csvFile {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 1.5em;
+    font-family: 'Tarot';
+}
+
+#sone h1 {
+    color: goldenrod;
+    animation: glow2 2.5s ease-in-out infinite alternate; /* Apply animation */
+}
+
+@keyframes glow {
+  from {
+    /* Multiple shadows create a soft, wide glow */
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.825), 0 0 10px rgba(75, 75, 75, 0.742), 0 0 20px #7c7c7caf, 0 0 30px #cacaca80;
+  }
+  to {
+    text-shadow: 0 0 10px rgba(165, 4, 4, 0.704), 0 0 20px #b34545b5, 0 0 30px #d599998a;
+  }
+}
+
+@keyframes glow2 {
+  from {
+    /* Multiple shadows create a soft, wide glow */
+    text-shadow: 0 0 10px rgba(255, 217, 0, 0.825), 0 0 10px rgba(218, 165, 32, 0.742), 0 0 20px #ffaa00af, 0 0 30px #b6b26980;
+  }
+  to {
+    text-shadow: 0 0 10px rgb(218, 165, 32), 0 0 20px #ffaa00b5, 0 0 30px #d5d5998a;
+  }
+}
+
+/* Extra small devices (phones, less than 768px) */
+@media (min-width:300px) {
+    h1 {
+        font-size: 3.75em;
+    }
+    .intro-p {
+        font-size: 1.5em;
+        padding: 9%;
+    }
+    h2 {
+        font-size: 1.65em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .btnLabel {
+        font-size: 1.5em;
+    }
+    .homeButton {
+        width: 65%;
+    }
+    .row.star-cont {
+        display: none;
+    }
+    .sm-star-col {
+        display: flex;
+    }
+    footer p {
+        font-size: 0.8em;
+    }
+    .md-star-cols {
+        display: none;
+    }
+    .row.star-cont {
+        display: none;
+    }
+ 
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    h1 {
+        font-size: 7.5em;
+    }
+    h2 {
+        font-size: 2.75em;
+    }
+    .homeButton {
+        width: 55%;
+    }
+    .intro-p {
+        font-size: 2.5em;
+        padding: 4%;
+    }
+    footer p {
+        font-size: 1.25em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .md-star-cols {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 80%;
+    }
+    .sm-star-col {
+        display: none;
+    }
+    .row.star-cont {
+        display: none;
+    }
+    .container {
+        height: auto;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    h1 {
+        
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+
+    }
+    p {
+
+    }
+    footer p {
+
+    }
+    .homeButton {
+        width: 35%
+    }
+    .intro-p {
+        font-size: 2em;
+    }
+    .sm-star-col {
+        display: none;
+    }
+    .md-star-cols {
+        display: none;
+    }
+    .row.star-cont {
+        display: flex;
+    }
+    .container {
+        height: auto;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .intro-p {
+        font-size: 3em;
+    }
+
+    .sm-star-col {
+        display: none;
+    }
+    .md-star-cols {
+        display: none;
+    }
+    .row.star-cont {
+        display: flex;
+    }
+    h1 {
+        font-size: 10em;
+    }
+    h2 {
+        font-size: 4em;
+    }
+    h3 {
+        font-size: 2.1em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .homeButton {
+        width: 29%;
+    }
+      .btnLabel {
+        font-size: 1.75em;
+    }
+    footer p {
+        font-size: 1.5em;
+    }
+    .container {
+        height: auto;
+    }
+}
+
+
+/***********************************************************/
+/**************************PAGE TWO - OPTIONS*************************/
+#stwo .opt-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+}
+
+#stwo .container {
+    justify-content: center;
+    z-index: 0;
+    width: 85%;
+    border-top: solid #c2c2c252;
+    border-left: solid #c2c2c252;
+    border-right: solid #c2c2c252;
+}
+.opt-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+.opt-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    padding: 3%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    z-index: 0;
+}
+img.opt-img {
+    width: 100%;
+}
+.optionBox {
+    border-radius: 50%;
+    background: #e0e0e0;
+    box-shadow: -15px 16px 50px 0px #000, 20px -20px 80px 20px #aca78c73;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 3px #2a816fbd;
+    padding: 1em;
+    margin: 2em;
+    background: linear-gradient(270deg, #8bedff, #dedede, #76cbd8, #c6c6c6);
+	background-size: 400% 400%;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.optionBox .col-sm-12 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.opt-p {
+    width: 50%;
+    text-align: center;
+    padding: 0.2em 0;
+}
+
+.opt-p.opt-top {
+    margin-top: 5%;
+}
+.homeButton.btnBot {
+    margin-bottom: 5%;
+}
+
+.header-img {
+    position: absolute;
+    z-index: -10;
+    width: 56%;
+    padding-top: 16%;
+}
+
+@media (min-width: 300px) {
+    .opt-p {
+        font-size: .9em;
+    }
+    .btnLabel.opt-new {
+        font-size: .75em;
+    }
+    h1 {
+        font-size: 4.5em;
+    }
+    .homeButton.btnTop, .homeButton.btnMid, .homeButton.btnBot {
+        width: 45%;
+    }
+    .optionBox {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .header-img {
+        width: 63%;
+    }
+}
+@media (min-width: 576px) {
+    .opt-p {
+        font-size: 1em;
+    }
+    .btnLabel.opt-new {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 5.25em;
+    }
+    .homeButton.btnTop, .homeButton.btnMid, .homeButton.btnBot {
+        width: 45%;
+    }
+    .optionBox {
+        padding: .75em;
+        margin: 1em;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .opt-p {
+        font-size: 1.15em;
+    }
+    .btnLabel.opt-new {
+        font-size: 1.25em;
+    }
+    h1 {
+        font-size: 7em;
+    }
+    .optionBox {
+        padding: 1.25em;
+    }
+}
+
+@media (min-width: 992px) {
+    .opt-p {
+        font-size: 1.5em;
+    }
+    .btnLabel.opt-new {
+        font-size: 1.75em;
+    }
+    h1 {
+        font-size: 9em;
+    }
+}
+
+@media (min-width: 1200px) {
+     .opt-p {
+        font-size: 1.65em;
+    }
+    .btnLabel.opt-new {
+        font-size: 2em;
+    }
+     h1 {
+        font-size: 10.5em;
+    }
+    .homeButton.btnTop, .homeButton.btnMid, .homeButton.btnBot {
+        width: 35%;
+    }
+    .optionBox {
+        padding: 2em;
+    }
+}
+
+
+/***********************************************************/
+/**************************PAGE THREE - NEW SPREAD*************************/
+
+#sthree .container {
+    flex-direction: column;
+    padding: 3%;
+    justify-content: center;
+    z-index: 0;
+    width: 85%;
+    border-top: solid #c2c2c252;
+    border-left: solid #c2c2c252;
+    border-right: solid #c2c2c252;
+}
+
+.form-label {
+    font-family: Pamela;
+    font-size: 4em;
+    color: goldenrod;
+    text-shadow: 3px 3px 6px #000000ec;
+}
+
+.visual-card-list {
+    background-color: #767c6469;
+}
+
+div#wizard-box {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+select#arcana-select, select#major-card-select, select#minor-rank, select#minor-suit {
+    background-color: darkgray;
+    border-color: #ffffff00;
+    font-family: 'Tarot';
+    font-size: 2em;
+    color: steelblue;
+    box-shadow: 5px 5px 10px 5px #0000008a;
+}
+.newButton {
+    display: flex;
+    padding: .5em;
+    width: 50%;
+    border: none;
+    background: #0089a1c2;
+    border-radius: 20px;
+    cursor: pointer;
+    flex-direction: column;
+}
+#sthree h2 {
+    width: 60%;
+    font-size: 3em;
+}
+div#step-1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 50%;
+    align-items: center;
+    justify-content: flex-start;
+}
+dialog#my-modal {
+    display: none;
+}
+div#step-2-major {
+    display: none;
+}
+div#step-2-minor {
+    display: none;
+}  
+.arcanaBtns {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+li.card-entry.list-group-item.d-flex.justify-content-between.align-items-center {
+    color: #000000;
+    background-color: cornsilk;
+    font-family: 'Pamela';
+    font-size: 2.5em;
+    border: solid 0.051em cornflowerblue;
+    box-shadow: 0 .1em 1em black;
+}
+@media (min-width: 300px) {
+    #sthree h1 {
+        font-size: 4em;
+    }
+    #sthree h2 {
+        width: 45%;
+        font-size: 1.75em;
+    }
+    .form-label {
+        font-size: 1.5em;
+    }
+    div#step-1 {
+        width: 75%;
+    }
+    #sthree .homeButton {
+        width: 47%;
+    }
+}
+@media (min-width: 576px) {
+    #sthree h2 {
+        font-size: 2em;
+    }
+    #sthree .homeButton {
+        width: 37%;
+    }
+}
+@media (min-width: 768px) {
+    #sthree h1 {
+        font-size: 5.75em;
+    }
+    #sthree h2 {
+        font-size: 2.5em;
+    }
+}
+@media (min-width: 992px) {
+    #sthree h1 {
+        font-size: 7em;
+    }
+    #sthree h2 {
+        font-size: 3em;
+    }
+}
+@media (min-width: 1200px) {
+     #sthree h1 {
+        font-size: 9em;
+    }
+    #sthree h2 {
+        font-size: 4em;
+    }
+}
+/***********************************************************/
+/**************************PAGE FOUR - VIEW SPREAD*************************/
+#sfour .container {
+    flex-direction: column;
+    padding: 3%;
+    justify-content: center;
+    z-index: 0;
+    width: 85%;
+    border-top: solid #c2c2c252;
+    border-left: solid #c2c2c252;
+    border-right: solid #c2c2c252;
+}
+#sfour h2 {
+    width: 50%;
+    font-size: 3em;
+}
+.spreadTable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    align-content: center;
+    flex-wrap: nowrap;
+    border-style: ridge;
+    align-items: center;
+    padding: 5%;
+} 
+tbody {
+    font-family: 'Tarot';
+    color: white;
+    font-size: 1.5em;
+}
+table {
+    color: white; 
+    border-collapse: collapse; 
+    width: 80%; 
+}
+th { 
+    font-family: 'Roman';
+    font-size: 2em;
+}
+td {
+    border: 2px solid #0d325c98; 
+    padding: 8px; 
+    text-align: left; 
+}
+#sfour .container {
+    border-radius: 0;
+}
+
+#sfour h2 {
+    width: 65%;
+    color: rgb(216, 155, 1);
+    text-shadow: 5px 5px 5px #0000007c;
+}
+#sfour h3 {
+    color: cornflowerblue;
+}
+@media (min-width: 300px) {
+
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+/***********************************************************/
+/**************************PAGE FIVE - STATISTICS*************************/
+#sfive .container {
+    flex-direction: column;
+    padding: 3%;
+    justify-content: center;
+    z-index: 0;
+    width: 85%;
+    border-top: solid #c2c2c252;
+    border-left: solid #c2c2c252;
+    border-right: solid #c2c2c252;
+}
+
+.current-stats {
+    background-color: #1d3b4f7d;
+    width: 100%;
+    display: flex;
+    margin-top: 1em;
+    box-shadow: 8px 8px 8px #000000bd;
+    border-style: ridge;
+    border-radius: 50% 50% 0 0;
+    flex-direction: column;
+}
+.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.mid-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+}
+.bot-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.right-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+#sfive p {
+    font-size: 1em;
+    padding-bottom: 6%;
+}
+.stat-box {
+    display: flex;
+    margin: 3%;
+    padding: 0 10%;
+}
+
+#sfive h2 {
+    font-size: 3em;
+    padding-top: 10%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: white;
+}
+.stats-text {
+    background: #5f9ea0ad;
+    box-shadow: 5px 5px 5px #1d1c39f0;
+    padding: 10%;
+    margin: 5%;
+}
+.stat-header {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+@media (min-width: 300px) {
+
+}
+@media (min-width: 576px) {
+
+}
+@media (min-width: 768px) {
+
+}
+@media (min-width: 992px) {
+
+}
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="View your tarot cards with Arcanalyzer.">
+    <meta name="author" content="Emma Lytle">
+
+	<!--Favicon-->
+	<link rel="shortcut icon" href="img/pentacle.png">
+	<link rel="icon" type="image/png" href="img/pentacle.png">
+	  <title>Arcanalyzer</title>
+	<!-- Bootstrap -->
+	<link href="css/bootstrap_5.0.2/bootstrap.min.css" rel="stylesheet">
+	<!-- Lightbox -->
+	<link href="css/lightbox.css" rel="stylesheet">
+	<!-- Main CSS -->
+	<link href="css/main.css" rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<!--Bootstrap Nav - https://getbootstrap.com/docs/5.0/components/navbar/#nav-->
+<nav class="navbar fixed-top navCon">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <!--<img class="img-fluid navbar-icon" style="width: 50px;" alt="Pentacle" src="img/pentacle.png">-->
+    </a>
+  <div class="nav-images">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+      <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+      <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+    </button>
+  </div>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+      <div class="offcanvas-header">
+          <img class="img-fluid navbar-icon" style="width: 70px;" alt="Pentacle" src="img/pentacle.png">
+          <h3 class="offcanvas-title" id="offcanvasNavbarLabel">ARCANALYZER</h3>
+            <div class="nav-images">  
+              <button type="button" class="off-swords" data-bs-dismiss="offcanvas" aria-label="Close">  
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword">
+                <img class="img-fluid nav-sword" src="img/sword.png" alt="Sword"> 
+              </button>
+            </div>
+        </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link active" href="welcome.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="options.html">Options</a></li>
+          <li class="nav-item"><a class="nav-link" href="new.html">New Spread</a></li>
+          <li class="nav-item"><a class="nav-link" href="view.html">View Cards</a></li>
+          <li class="nav-item"><a class="nav-link" href="stats.html">Spread Stats</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Section One -->
+<div id="sone">
+  <div class="main-container">
+    <!-- Ripple Background -->
+    <div class="background-div">
+      <div class="ripple-cont">
+        <button>‎</button>
+        <button>‎</button>
+        <button>‎</button>
+        <button>‎</button>
+        <button>‎</button>
+      </div>
+    </div>
+    <div class="foreground-content">
+      <!-- Start of body -->
+      <div class="row star-cont">
+        <div class="col-sm-2">
+          <img class="star1 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-2">
+          <img class="star2 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-2">
+          <img class="star3 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-3">
+          <img class="star4 img-fluid" alt="Rider-Waite Star" src="img/large_star.png">
+        </div>
+        <div class="col-sm-2">
+          <img class="star5 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-2">
+          <img class="star6 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-2">
+          <img class="star7 img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+      </div>
+
+      <div class="sm-star-col">
+        <div class="col-sm-12">
+          <img class="single-star img-fluid" alt="Rider-Waite Star" src="img/large_star.png">
+        </div>
+      </div>
+      <div class="md-star-cols">
+        <div class="col-sm-3">
+          <img class="start-star img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+        <div class="col-sm-6">
+          <img class="mid-star img-fluid" alt="Rider-Waite Star" src="img/large_star.png">
+        </div>
+        <div class="col-sm-3">
+          <img class="end-star img-fluid" alt="Rider-Waite Star" src="img/small_star.png">
+        </div>
+      </div>
+
+      <div class="intro">
+        <h1>ARCANALYZER</h1>
+          <div class="col-sm-12">
+            <p class="intro-p">Welcome to <span class="title-flair">Arcanalyzer</span>, a tool for compiling your Tarot Spreads into one place. Here you can see the statistics of your pulls, as well as the patterns and concentration of signs and numbers.</p>
+          </div>
+            <div class="option-row">
+              <div class="col-sm-6">
+                <h2>Upload Log</h2>
+                  <p>Load an existing SpreadSheet</p>
+                    <button class="homeButton" onclick="document.getElementById('csvFile').click()">           
+                      <img class="btnIcon" src="img/pentacle.png" alt="Pentacle">
+                        <span class="btnLabel">UPLOAD LOG</span>
+                    </button>
+              </div>
+              <div class="csvFile">
+                <input type="file" id="csvFile" accept=".csv" onchange="handleFileUpload()" hidden>
+              </div>
+              <div class="col-sm-6">
+                <h2>New SpreadSheet</h2>
+                  <p>Start a fresh Log</p>
+                   <button class="homeButton" onclick="createNewLog()">
+                      <img class="btnIcon" src="img/wheel.png" alt="Wheel">
+                        <span class="btnLabel">NEW SHEET</span>
+                    </button>           
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="foot">
+    <p class="foot-p">ARCANALYZER &copy;2026. DECODE YOUR PATTERNS. ALL RIGHTS RESERVED.</p>
+</footer>
+
+<!-- jQuery --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Lightbox JS -->
+<script src="js/lightbox.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="js/bootstrap_5.0.2/bootstrap.min.js"></script>
+<script src="js/p1scripts.js"></script>
+</body>
+</html>
